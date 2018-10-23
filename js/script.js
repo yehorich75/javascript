@@ -22,14 +22,16 @@ function Scroll(){
 }
 window.addEventListener("scroll",Scroll);
 
-// function Scroll(){
-//   var topEven = document.querySelectorAll('li');
-//   var topOdd = document.querySelectorAll('li');
-//   var ypos = window.pageYOffset;
-//   (ypos > 50) ? topEven.classList.add('item__even-active') : topEven.classList.add('item__even');
-//     // topOdd.classList.toggle('item__odd-active');
-// }
-// window.addEventListener("scroll",Scroll);
+function Scroll(){
+  var topEven = document.querySelectorAll('li');
+  var topOdd = document.querySelectorAll('li');
+  var ypos = window.pageYOffset;
+  if(ypos > 50) {
+    topEven.classList.toggle('item__even-active');
+    topOdd.classList.toggle('item__odd-active');
+  }
+}
+window.addEventListener("scroll",Scroll);
 
 
 
