@@ -11,14 +11,23 @@ button.addEventListener("click", myFunk);
 // }
 
 
+// function Scroll(){
+//   var topEven = document.querySelectorAll('li');
+//   var topOdd = document.querySelectorAll('li');
+//   var ypos = window.pageYOffset;
+//   if(ypos > 50) {
+//     topEven.classList.toggle('item__even-active');
+//     topOdd.classList.toggle('item__odd-active');
+//   }
+// }
+// window.addEventListener("scroll",Scroll);
+
 function Scroll(){
-  var topEven = document.querySelectorAll('item__even');
-  var topOdd = document.querySelectorAll('item__odd');
+  var topEven = document.querySelectorAll('li');
+  var topOdd = document.querySelectorAll('li');
   var ypos = window.pageYOffset;
-  if(ypos > 50) {
-    topEven.classList.toggle('item__even-active');
-    topOdd.classList.toggle('item__odd-active');
-  }
+  (ypos > 50) ? topEven.classList.add('item__even-active') : topEven.classList.add('item__even');
+    // topOdd.classList.toggle('item__odd-active');
 }
 window.addEventListener("scroll",Scroll);
 
