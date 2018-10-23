@@ -1,7 +1,6 @@
-
-function myFunk(){
-  var bgColor = document.querySelector("#header");
-  bgColor.classList.toggle("header__open");
+function myFunk() {
+    var bgColor = document.querySelector("#header");
+    bgColor.classList.toggle("header__open");
 }
 button.addEventListener("click", myFunk);
 
@@ -11,16 +10,22 @@ button.addEventListener("click", myFunk);
 // }
 
 
-function Scroll(){
-  var topEven = document.querySelectorAll('li');
-  var topOdd = document.querySelectorAll('li');
-  var ypos = window.pageYOffset;
-  if(ypos > 50) {
-    topEven.classList.toggle('item__even-active');
-    topOdd.classList.toggle('item__odd-active');
-  }
+function Scroll() {
+    var parentDiv = document.getElementById('items');
+    var topItem = document.querySelectorAll('.item');
+    var topEven = document.querySelectorAll('.item__even');
+    var topOdd = document.querySelectorAll('.item__odd');
+    var arr = Array.prototype.slice.call(topItem, 0);
+    var ypos = window.pageYOffset;
+    if (ypos > 50) {
+        topEven.classList.add('item__even-active');
+        topOdd.classList.add('item__odd-active');
+    } else {
+        topEven.classList.remove('item__even');
+        topOdd.classList.remove('item__odd');
+    }
 }
-window.addEventListener("scroll",Scroll);
+window.addEventListener("scroll", Scroll);
 
 function Scroll(){
   var topEven = document.querySelectorAll('li');
