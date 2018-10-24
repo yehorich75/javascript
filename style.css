@@ -30,24 +30,12 @@
     list-style: none;
 }
 
-.items__active {
-    transform: translateX(-600px);
-}
-
-.items .item {
-    transition: all 0.5s;
-}
-
 .items .item__odd {
     background-color: #35ac1e;
     color: #fff;
     padding: 5px 10px;
     margin: 0 auto 20px;
     width: 120px;
-}
-
-.items .item__odd-active {
-    transform: translateX(600px);
 }
 
 .items .item__even {
@@ -57,7 +45,16 @@
     width: 120px;
 }
 
-.items .item__even-active {
+.items-active .item {
+    transition: transform 0.5s;
+}
+
+.items-active .item__odd {
+    transform: translateX(600px);
+}
+
+.items-active .item__even {
     transform: translateX(-600px);
 }
+
 

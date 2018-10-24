@@ -4,82 +4,12 @@ function myFunk() {
 }
 button.addEventListener("click", myFunk);
 
-// function myItemRun(){
-//   var itemRun = document.getElementById('items').getElementsByClassName('item');
-//   itemRun.classList.scroll("item__hide");
-// }
-
-
-function Scroll() {
-    var parentDiv = document.getElementById('items');
-    var topItem = document.querySelectorAll('.item');
-    var topEven = document.querySelectorAll('.item__even');
-    var topOdd = document.querySelectorAll('.item__odd');
-    var arr = Array.prototype.slice.call(topItem, 0);
-    var ypos = window.pageYOffset;
-    if (ypos > 50) {
-        topEven.classList.add('item__even-active');
-        topOdd.classList.add('item__odd-active');
-    } else {
-        topEven.classList.remove('item__even');
-        topOdd.classList.remove('item__odd');
-    }
-}
-window.addEventListener("scroll", Scroll);
 
 function Scroll(){
-  var topEven = document.querySelectorAll('li');
-  var topOdd = document.querySelectorAll('li');
+  var itemList = document.getElementById('items');
   var ypos = window.pageYOffset;
   if(ypos > 50) {
-    topEven.classList.toggle('item__even-active');
-    topOdd.classList.toggle('item__odd-active');
+    itemList.classList.add('items-active');
   }
 }
 window.addEventListener("scroll",Scroll);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Image switcher code
-// var myImage = document.querySelector('img');
-
-// myImage.onclick = function() {
-//     var mySrc = myImage.getAttribute('src');
-//     if(mySrc === 'images/photo-1.jpg') {
-//       myImage.setAttribute ('src','images/photo-2.jpg');
-//     } else {
-//       myImage.setAttribute ('src','images/photo-1.jpg');
-//     }
-// }
-
-// Personalized welcome message code
-// var myButton = document.querySelector('button');
-// var myHeading = document.querySelector('h1');
-
-// function setUserName() {
-//     var myName = prompt('Please enter your name.');
-//     localStorage.setItem('name', myName);
-//     myHeading.innerHTML = 'Mozilla is cool ', + myName;
-// }
-
-// if(!localStorage.getItem('name')) {
-//   setUserName();
-// } else {
-//   var storedName = localStorage.getItem('name');
-//   myHeading.innerHTML  = 'Mozilla is cool, ' + storedName;
-// }
-
-// myButton.onclick = function() {
-//   setUserName();
-// };
