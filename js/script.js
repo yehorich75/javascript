@@ -10,6 +10,8 @@ function Scroll(){
   var ypos = window.pageYOffset;
   if(ypos > 50) {
     itemList.classList.add('items-active');
+  } else {
+    itemList.classList.remove('items-active');
   }
 }
 window.addEventListener("scroll",Scroll);

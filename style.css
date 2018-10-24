@@ -30,6 +30,10 @@
     list-style: none;
 }
 
+.items .item {
+    transition: transform 0.5s;
+}
+
 .items .item__odd {
     background-color: #35ac1e;
     color: #fff;
