@@ -41,6 +41,7 @@
     padding: 5px 10px;
     margin: 0 auto 20px;
     width: 120px;
+    transform: translateX(1100px);
 }
 
 .items .item__even {
@@ -48,6 +49,7 @@
     padding: 5px 10px;
     margin: 0 auto 20px;
     width: 120px;
+    transform: translateX(-1100px);
 }
 
 .items-active .item {
@@ -55,11 +57,11 @@
 }
 
 .items-active .item__odd {
-    transform: translateX(600px);
+    transform: translateX(0);
 }
 
 .items-active .item__even {
-    transform: translateX(-600px);
+    transform: translateX(0);
 }
 
 .section {

@@ -16,8 +16,19 @@ function Scroll() {
 }
 window.addEventListener("scroll", Scroll);
 
-const box = document.querySelector('div.box');
 
+const box = document.querySelector('div.box');
 window.addEventListener('scroll', function() {
-    console.log(window.innerHeight);
+    if (box.getBoundingClientRect().top < window.innerHeight) {
+        box.style.background = 'red';
+    }
 });
+
+// function redColor() {
+//     const box = document.querySelector('div.box');
+
+//     if (box.getBoundingClientRect().top < window.innerHeight) {
+//         box.style.background = 'red';
+//     }
+// }
+// window.addEventListener('scroll', redColor);
