@@ -5,19 +5,19 @@ function myFunk() {
 button.addEventListener("click", myFunk);
 
 
-function Scroll(){
-  var itemList = document.getElementById('items');
-  var ypos = window.pageYOffset;
-  if(ypos > 50) {
-    itemList.classList.add('items-active');
-  } else {
-    itemList.classList.remove('items-active');
-  }
+function Scroll() {
+    var itemList = document.getElementById('items');
+    var ypos = window.pageYOffset;
+    if (ypos > 50) {
+        itemList.classList.add('items-active');
+    } else {
+        itemList.classList.remove('items-active');
+    }
 }
-window.addEventListener("scroll",Scroll);
+window.addEventListener("scroll", Scroll);
 
-var elem = document.querySelector('#elem');
-window.addEventListener('click', function(event) {
-  elem.style.left = event.clientX + 'px';
-  elem.style.top = event.clientY + 'px';
+const box = document.querySelector('div.box');
+
+window.addEventListener('scroll', function() {
+    console.log(window.innerHeight);
 });
