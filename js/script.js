@@ -15,3 +15,9 @@ function Scroll(){
   }
 }
 window.addEventListener("scroll",Scroll);
+
+var elem = document.querySelector('#elem');
+window.addEventListener('click', function(event) {
+  elem.style.left = event.clientX + 'px';
+  elem.style.top = event.clientY + 'px';
+});
